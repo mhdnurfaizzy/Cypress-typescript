@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-07-05T00:27:08.125Z",
+    "end": "2023-07-05T00:27:24.567Z",
+    "duration": 16442,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08789134-96c6-4eab-b351-63d824555a66",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.ts",
+      "file": "cypress/integration/checkout.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test Sauce Demo Can Checkout Sauce labs product backpack",
+          "fullTitle": "Test Sauce Demo Can Checkout Sauce labs product backpack",
+          "timedOut": null,
+          "duration": 8200,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ncheckoutpd.clickAddtoCart();\ncheckoutpd.clickCart();\ncheckoutpd.clickCheckout();\ncheckoutpd.checkout('test', 'test', '12345');\ncheckoutpd.clickContinue();\ncheckoutpd.clickFinish();\ncheckoutpd.assertCheckout();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'THANK YOU FOR YOUR ORDER' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'THANK YOU FOR YOUR ORDER' but never did.\n    at CheckoutPd.assertCheckout (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:188:49)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:116:16)",
+            "diff": null
+          },
+          "uuid": "e2c461cd-7eab-4d04-8a07-f5eae8e93101",
+          "parentUUID": "08789134-96c6-4eab-b351-63d824555a66",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Can't Checkout Sauce labs product backpack with empty postal code",
+          "fullTitle": "Test Sauce Demo Can't Checkout Sauce labs product backpack with empty postal code",
+          "timedOut": null,
+          "duration": 6274,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ncheckoutpd.clickAddtoCart();\ncheckoutpd.clickCart();\ncheckoutpd.clickCheckout();\ncheckoutpd.failcheckout('test', 'test');\ncheckoutpd.clickContinue();\ncheckoutpd.assertFailCheckout();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Error: First Name is required' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Error: First Name is required' but never did.\n    at CheckoutPd.assertFailCheckout (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:192:54)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:127:16)",
+            "diff": null
+          },
+          "uuid": "478a5e08-f239-4e2e-a0b9-863059921171",
+          "parentUUID": "08789134-96c6-4eab-b351-63d824555a66",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "e2c461cd-7eab-4d04-8a07-f5eae8e93101",
+        "478a5e08-f239-4e2e-a0b9-863059921171"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 14474,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

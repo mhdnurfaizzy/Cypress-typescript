@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-07-05T00:14:53.226Z",
+    "end": "2023-07-05T00:15:08.310Z",
+    "duration": 15084,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.ts",
+      "file": "cypress/integration/checkout.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test LOGIN",
+          "fullTitle": "Test LOGIN",
+          "timedOut": null,
+          "duration": 2273,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();",
+          "err": {},
+          "uuid": "e8740001-4060-4674-8256-ef0ae038b0f8",
+          "parentUUID": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Invalid Password",
+          "fullTitle": "Test Sauce Demo Invalid Password",
+          "timedOut": null,
+          "duration": 1123,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'invalidPass');\nloginPage.assertLoginFail();",
+          "err": {},
+          "uuid": "6ad68dae-8c94-4c2d-a640-532071c92c95",
+          "parentUUID": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Sauce labs product backpack",
+          "fullTitle": "Test Sauce Demo Sauce labs product backpack",
+          "timedOut": null,
+          "duration": 1058,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();",
+          "err": {},
+          "uuid": "397797d7-9725-4a58-b017-db3d779fe364",
+          "parentUUID": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Can Checkout Sauce labs product backpack",
+          "fullTitle": "Test Sauce Demo Can Checkout Sauce labs product backpack",
+          "timedOut": null,
+          "duration": 6502,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ncheckoutpd.clickAddtoCart();\ncheckoutpd.clickCart();\ncheckoutpd.clickCheckout();\ncheckoutpd.checkout('test', 'test', '12345');\ncheckoutpd.clickContinue();\ncheckoutpd.clickFinish();\ncheckoutpd.assertCheckout();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'THANK YOU FOR YOUR ORDER' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'THANK YOU FOR YOUR ORDER' but never did.\n    at CheckoutPd.assertCheckout (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:201:49)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:129:16)",
+            "diff": null
+          },
+          "uuid": "c7266e95-d196-4a08-86ec-c48974a39b7e",
+          "parentUUID": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Can't Checkout Sauce labs product backpack with empty postal code",
+          "fullTitle": "Test Sauce Demo Can't Checkout Sauce labs product backpack with empty postal code",
+          "timedOut": null,
+          "duration": 1947,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ncheckoutpd.clickAddtoCart();\ncheckoutpd.clickCart();\ncheckoutpd.clickCheckout();\ncheckoutpd.failcheckout('test', 'test');\ncheckoutpd.clickContinue();\ncheckoutpd.assertFailCheckout();",
+          "err": {},
+          "uuid": "6cfa70cb-ece7-4ce8-8ba9-6e86083e8434",
+          "parentUUID": "91993f1f-f7ec-4b2b-91b1-f55d7b29ac2c",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "e8740001-4060-4674-8256-ef0ae038b0f8",
+        "6ad68dae-8c94-4c2d-a640-532071c92c95",
+        "397797d7-9725-4a58-b017-db3d779fe364",
+        "6cfa70cb-ece7-4ce8-8ba9-6e86083e8434"
+      ],
+      "failures": [
+        "c7266e95-d196-4a08-86ec-c48974a39b7e"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 12903,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
