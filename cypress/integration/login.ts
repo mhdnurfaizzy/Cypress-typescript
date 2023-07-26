@@ -6,6 +6,8 @@ let loginPage = new LoginPage()
 let dashboardPage = new DashboardPage()
 let coProduct = new CoProduct()
 
+///test
+
 const URL = 'https://www.saucedemo.com/'
 
 it('Test LOGIN', () => {
